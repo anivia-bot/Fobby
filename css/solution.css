@@ -1,0 +1,92 @@
+.gradient-background {
+  background: linear-gradient(300deg, #1954e9, #dcd6d6, #f92a0f);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.profile-img {
+  border-radius: 50%;
+  height: 100px;
+}
+
+.dark-blue-text {
+  color: darkblue;
+}
+
+.logos {
+  overflow: hidden;
+  padding: 80px 0;
+  position: relative; /* Helps to contain the child elements properly */
+  white-space:nowrap;
+}
+
+.logos-slide {
+  display: inline-flex; /* Use flex to display logos horizontally */
+  white-space: nowrap;
+  animation: slide 16s linear infinite;
+}
+
+.logos-slide img {
+  margin-right: 60px; /* Add some space between logos */
+  height: 60px; /* Set logo height to a uniform size */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.row-cols-md-4 > .col {
+  display: flex;
+}
+
+.row-cols-md-4 .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.row-cols-md-4 .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.row-cols-md-4 .card-body ul {
+  flex-grow: 1;
+}
+
+.row-cols-md-4 .card-body button {
+  margin-top: auto;
+}
+@media (max-width: 768px) {
+  .position-absolute.bottom-0.end-0 {
+    position: relative !important;
+    right: auto !important;
+    text-align: center;
+    width: 100%;
+  }
+}
